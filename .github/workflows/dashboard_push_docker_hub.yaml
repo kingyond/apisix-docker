@@ -2,6 +2,7 @@ name: Push apisix dashboard to Docker image
 on:
   push:
     branches: ['release/apisix-dashboard**']
+  workflow_dispatch: # 添加此行以支持手动触发
 jobs:
   build:
     strategy:
