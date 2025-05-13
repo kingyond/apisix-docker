@@ -25,7 +25,7 @@ RUN set -x \
     && git clone https://github.com/apache/apisix-dashboard.git -b ${APISIX_DASHBOARD_TAG} /usr/local/apisix-dashboard \
     && cd /usr/local/apisix-dashboard && git clean -Xdf \
     && rm -f ./.githash && git log --pretty=format:"%h" -1 > ./.githash \
-    && rm /usr/local/openresty/bin/etcdctl
+#    && rm /usr/local/openresty/bin/etcdctl
 
 FROM --platform=$BUILDPLATFORM golang:1.19 as api-builder
 
