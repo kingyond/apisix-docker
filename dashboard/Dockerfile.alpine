@@ -50,8 +50,8 @@ COPY --from=pre-build /usr/local/apisix-dashboard .
 
 WORKDIR /usr/local/apisix-dashboard/web
 
-RUN yarn install \
-    && yarn build
+RUN yarn config set registry https://registry.npmjs.org/
+RUN yarn install && yarn build
 
 FROM alpine:latest AS prod
 
