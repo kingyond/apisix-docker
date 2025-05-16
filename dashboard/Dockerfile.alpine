@@ -17,7 +17,7 @@ ARG BUILDPLATFORM=amd64
 
 FROM --platform=$BUILDPLATFORM alpine:latest AS pre-build
 
-ARG APISIX_DASHBOARD_TAG=v3.0.1
+ARG APISIX_DASHBOARD_TAG=master
 
 RUN set -x \
     && apk add --no-cache --virtual .builddeps git \
